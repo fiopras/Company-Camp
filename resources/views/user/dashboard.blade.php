@@ -18,7 +18,7 @@
             @include('components.alert')
             <table class="table">
                 <tbody>
-                    @foreach ($checkouts as $checkout )
+                    @forelse ($checkouts as $checkout )
                         <tr class="align-middle">
                             <td width="18%">
                                 <img src="{{ asset('images/item_bootcamp.png') }}" height="120" alt="">
@@ -48,7 +48,14 @@
                                 </a>
                             </td>
                         </tr>
-                    @endforeach
+                    @empty
+                        <tr>
+                            <td colspan="5">
+                               <h3 class="text-center">No Data</h3>
+                               <hr>
+                            </td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
