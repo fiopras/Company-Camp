@@ -11,6 +11,7 @@ class CampBenefit extends Model
     use HasFactory, softDeletes;
 
     protected $fillable = [
+        'campe_id',
         'name'
     ];
 }
